@@ -1,11 +1,13 @@
 public class StudentInfo {
 	
 	//Attributes
+	//Each node will have a left and right child
 	private StudentInfo leftChild,rightChild;
 	private int StudentNumber;
 	String firstName,lastName;
 	
-	//Constructor for StudentInfo	
+	//Constructor for StudentInfo
+	//Sets initial values to null
 	public StudentInfo(int StudentNumber, String FirstName, String LastName){
 		leftChild = null;
 		rightChild = null;
