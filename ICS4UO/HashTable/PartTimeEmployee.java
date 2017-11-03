@@ -5,8 +5,8 @@ public class PartTimeEmployee extends EmployeeInfo {
 	private double hoursPerWeek;
 	private double weeksPerYear;
 	
-	public PartTimeEmployee(int employeeNumber, String firstName) {
-		super(employeeNumber, firstName);
+	public PartTimeEmployee(int employeeNumber) {
+		super(employeeNumber);
 		
 	}
 	

@@ -1,11 +1,16 @@
 public class HashTest {
 	
-	MyHashTable theHashTable = new MyHashTable(3);
+	static MyHashTable theHashTable = new MyHashTable(3);
 
 	public static void main(String[] args) {
 		
-		EmployeeInfo emp1 = new EmployeeInfo(420, "George");
+		EmployeeInfo emp1 = new EmployeeInfo(2);
 		theHashTable.addEmployee(emp1);
+		theHashTable.displayContents();
+		theHashTable.searchByEmployeeNumber(2);
+		theHashTable.removeEmployee(emp1);
+		theHashTable.displayContents();
+		theHashTable.searchByEmployeeNumber(2);
 	}
 
 }

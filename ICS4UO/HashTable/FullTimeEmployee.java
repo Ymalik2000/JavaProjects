@@ -3,8 +3,8 @@ public class FullTimeEmployee extends EmployeeInfo {
 	
 	private double yearlySalary;
 
-	public FullTimeEmployee(int employeeNumber, String firstName) {
-		super(employeeNumber, firstName);
+	public FullTimeEmployee(int employeeNumber) {
+		super(employeeNumber);
 	}
 
 	

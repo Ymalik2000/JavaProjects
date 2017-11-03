@@ -8,11 +8,9 @@ public class EmployeeInfo {
     protected int workLoc; // encode e.g. 0 for Mississauga, etc.
     protected double deductionRate; // e.g. 0.21 for 21%
 
-    public EmployeeInfo(int employeeNumber, String firstName){
+    public EmployeeInfo(int employeeNumber){
 		this.empNum = employeeNumber;
-		this.firstName = firstName;
 	}
-	
 	public String getFirstName() {
 		return firstName;
 	}

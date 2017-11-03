@@ -25,7 +25,7 @@ public class MyHashTable {
 	
 	// METHODS
 
-	public int calcBucket(int keyValue) {
+	public int bucketLocation(int keyValue) {
 		// Returns the bucket number as the integer keyValue modulo the number of buckets for the hash table.
 		return(keyValue % buckets.length);
 	}
@@ -33,18 +33,29 @@ public class MyHashTable {
 
 	
 	public void addEmployee(EmployeeInfo theEmployee) {
-		// Add the employee to the hash table.  Return true if employee is added successfully,
-		// return false otherwise.
+		// Add the employee to the hash table.
 		int empPlace = theEmployee.getEmpNumber() % bucketCount;
+		int empNum = theEmployee.getEmpNumber();
 		buckets[empPlace].add(theEmployee);
-		
+		System.out.println("\nEmployee " + empNum + " has been added.");
 	}
 
 	
 	
-	public int searchByEmployeeNumber(int employeeNum) {
+	public void searchByEmployeeNumber(int employeeNum) {
 		// Determine the position of the employee in the ArrayList for the bucket that employee hashes to.
-		// If the employee is not found, return -1.
+		int empPlace = employeeNum % bucketCount;
+		boolean existCheck = false;
+		for (int i = 0; i < buckets[empPlace].size(); i++) {
+			if (buckets[empPlace].get(i).getEmpNumber() == employeeNum) {
+				System.out.println("\nEmployee " + employeeNum + " is in bucket " + empPlace + " and is in position "
+						+ i);
+				existCheck = true;
+			}
+		}
+		if (existCheck == false) {
+			System.out.println("\nEmployee " + employeeNum + " is not in the Hash Table.");
+		}
 	}
 
 	
@@ -52,10 +63,12 @@ public class MyHashTable {
 	public void removeEmployee(EmployeeInfo theEmployee) {
 		// Remove the employee from the hash table
 		int empPlace = theEmployee.getEmpNumber() % bucketCount;
-		for (int i = 0; i < buckets[empPlace].size() - 1; i++) {
+		int empNum = theEmployee.getEmpNumber();
+		for (int i = 0; i < buckets[empPlace].size(); i++) {
 
 			if (buckets[empPlace].get(i).getEmpNumber() == theEmployee.getEmpNumber()) {
 				buckets[empPlace].remove(i);
+				System.out.println("\nEmployee " + empNum + " has been removed.");
 			}
 		}
 	}
