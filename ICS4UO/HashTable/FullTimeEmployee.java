@@ -1,10 +1,10 @@
-
 public class FullTimeEmployee extends EmployeeInfo {
 	
 	private double yearlySalary;
 
-	public FullTimeEmployee(int employeeNumber) {
-		super(employeeNumber);
+	public FullTimeEmployee(int employeeNumber, String Fn, String Ln, int sex, String workLoc, double deductRate, int yearlySalary) {
+		super(employeeNumber, Fn, Ln, sex, workLoc, deductRate);
+		this.yearlySalary = yearlySalary;
 	}
 
 	

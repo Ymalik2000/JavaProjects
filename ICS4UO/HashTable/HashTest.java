@@ -4,13 +4,21 @@ public class HashTest {
 
 	public static void main(String[] args) {
 		
-		EmployeeInfo emp1 = new EmployeeInfo(2);
-		theHashTable.addEmployee(emp1);
+		FullTimeEmployee theEmployee = new FullTimeEmployee(2, "Daffy", "Duck", 0, "Mississauga", 0.21, 50000);
+		theHashTable.addEmployee(theEmployee);
+		theEmployee = new FullTimeEmployee(5, "Foghorn", "Leghorn", 0, "Toronto", 0.21, 55);
+		theHashTable.addEmployee(theEmployee);
+		
+		
+		
+		//Input Test Section
+		/*System.out.println(theEmployee.calcAnnualGrossIncome());
+		theHashTable.addEmployee(theEmployee);
 		theHashTable.displayContents();
 		theHashTable.searchByEmployeeNumber(2);
-		theHashTable.removeEmployee(emp1);
+		theHashTable.removeEmployee(theEmployee);
 		theHashTable.displayContents();
-		theHashTable.searchByEmployeeNumber(2);
+		theHashTable.searchByEmployeeNumber(2);*/
 	}
 
 }
