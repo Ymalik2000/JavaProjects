@@ -74,22 +74,24 @@ public class MyHashTable {
 	}
 
 	public void employeeStats(EmployeeInfo theEmployee) {
-		System.out.println("/nEmployee Number: " + theEmployee.getEmpNumber());
-		System.out.println("/nFirst Name: " + theEmployee.getFirstName());
-		System.out.println("/nLast Name: " + theEmployee.getLastName());
+		System.out.println("\nEmployee Number: " + theEmployee.getEmpNumber());
+		System.out.println("First Name: " + theEmployee.getFirstName());
+		System.out.println("Last Name: " + theEmployee.getLastName());
 		if (theEmployee.getSex() == 0) {
-		System.out.println("/nSex: Male");
+			System.out.println("Sex: Male");
 		}
 		else {
-			System.out.println("/nSex: Female");
+			System.out.println("Sex: Female");
 		}
-		System.out.println("/nWork Location: " + theEmployee.getWorkLoc());
-		System.out.println("/nLast Deduction Rate: " + theEmployee.getDeductionRate());
+		System.out.println("Work Location: " + theEmployee.getWorkLoc());
+		System.out.println("Last Deduction Rate: " + theEmployee.getDeductionRate());
 		if (theEmployee instanceof FullTimeEmployee) {
-			System.out.println("Yearly Salary: " + theEmployee.getYearlySalary());
+			FullTimeEmployee fullEmp = (FullTimeEmployee) theEmployee;
+			System.out.println("Annual Net Income: " + fullEmp.getYearlySalary());
 		}
 		else if (theEmployee instanceof PartTimeEmployee) {
-			System.out.println("Hours Per Week: " + theEmployee);
+			PartTimeEmployee partEmp = (PartTimeEmployee) theEmployee;
+			System.out.println("Annual Net Income: " + partEmp.getYearlySalary()s);
 		}
 	}
 	
