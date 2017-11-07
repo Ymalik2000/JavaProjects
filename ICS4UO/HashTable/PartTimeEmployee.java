@@ -1,4 +1,3 @@
-
 public class PartTimeEmployee extends EmployeeInfo {
 
 	private double hourlyWage;
@@ -7,10 +6,9 @@ public class PartTimeEmployee extends EmployeeInfo {
 	
 	public PartTimeEmployee(int employeeNumber, String Fn, String Ln, int sex, String workLoc, int deductRate) {
 		super (employeeNumber, Fn, Ln, sex, workLoc, deductRate);
-		
 	}
 	
-	public double calcAnnualGrossIncome (){		
+	public double calcAnnualGrossIncome(){		
 		return hourlyWage*hoursPerWeek*weeksPerYear;
 	}
 	

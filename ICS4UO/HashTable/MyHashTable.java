@@ -73,7 +73,25 @@ public class MyHashTable {
 		}
 	}
 
-	
+	public void employeeStats(EmployeeInfo theEmployee) {
+		System.out.println("/nEmployee Number: " + theEmployee.getEmpNumber());
+		System.out.println("/nFirst Name: " + theEmployee.getFirstName());
+		System.out.println("/nLast Name: " + theEmployee.getLastName());
+		if (theEmployee.getSex() == 0) {
+		System.out.println("/nSex: Male");
+		}
+		else {
+			System.out.println("/nSex: Female");
+		}
+		System.out.println("/nWork Location: " + theEmployee.getWorkLoc());
+		System.out.println("/nLast Deduction Rate: " + theEmployee.getDeductionRate());
+		if (theEmployee instanceof FullTimeEmployee) {
+			System.out.println("Yearly Salary: " + theEmployee.getYearlySalary());
+		}
+		else if (theEmployee instanceof PartTimeEmployee) {
+			System.out.println("Hours Per Week: " + theEmployee);
+		}
+	}
 	
 	public void displayContents() {
 		
